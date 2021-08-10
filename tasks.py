@@ -34,24 +34,18 @@ def get_coins(m0):
     return coins
 
 
-# print(get_coins(70.1))
-
-
 def check_palindrome(s):
     """
     Find whether the string is a palindrome
     """
     if not isinstance(s, str):
         raise TypeError
-    s= s.lower()
+    s = s.lower()
     size = len(s)
-    iter = size//2
-    #we need to iterate  only half of the string.
+    iter : int = size
+    # we need to iterate  only half of the string.
     # Pull out the middle char if we have odd number of chars
-    for i in range(0, iter ):
-        if s[i] != s[size - i-1]:
+    for i in range(0, iter):
+        if s[i] != s[size - i - 1]:
             return False
     return True
-
-
-#print(check_palindrome(1))

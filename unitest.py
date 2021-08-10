@@ -1,5 +1,5 @@
 import unittest
-from tasks import get_coins , check_palindrome
+from tasks import get_coins, check_palindrome
 
 
 class TestTask2(unittest.TestCase):
@@ -21,6 +21,7 @@ class TestTask2(unittest.TestCase):
         with self.assertRaises(TypeError):
             result = get_coins(1.1)
 
+
 class TestTask1(unittest.TestCase):
     def test_palindrome(self):
         """
@@ -39,6 +40,7 @@ class TestTask1(unittest.TestCase):
     def test_bad_type(self):
         with self.assertRaises(TypeError):
             result = check_palindrome(1001)
+
 
 if __name__ == '__main__':
     unittest.main()
