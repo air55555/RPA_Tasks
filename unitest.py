@@ -22,19 +22,19 @@ class TestTask2(unittest.TestCase):
             result = get_coins(1.1)
 
 class TestTask1(unittest.TestCase):
-    def test_get_all_coins(self):
+    def test_palindrome(self):
         """
         Test  palindrome
         """
         result = check_palindrome("Abba")
         self.assertTrue(result)
 
-    def test_zero_coins(self):
+    def test_not_palindrome(self):
         """
-        Test  zero coins
+        Test  not_palindrome
         """
-        result = get_coins(0)
-        self.assertEqual(result, {1: 0, 5: 0, 10: 0, 20: 0, 50: 0, 100: 0})
+        result = check_palindrome("aaoaa")
+        self.assertFalse(result)
 
     def test_bad_type(self):
         with self.assertRaises(TypeError):
