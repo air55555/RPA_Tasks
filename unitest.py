@@ -33,7 +33,7 @@ class TestTask1(unittest.TestCase):
         """
         Test  not_palindrome
         """
-        result = check_palindrome("aaoaa")
+        result = check_palindrome("aanoaa")
         self.assertFalse(result)
 
     def test_bad_type(self):
